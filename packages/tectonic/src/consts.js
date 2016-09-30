@@ -16,3 +16,13 @@ export const RETURNS_LIST = 'list';
 // TODO: Should this be used for POST and PATCH? Spec:
 // https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 export const RETURNS_NONE = 'none';
+
+export const PENDING = 'PENDING';
+export const SUCCESS = 'SUCCESS';
+export const ERROR = 'ERROR';
+
+// UNDEFINED_PARAMS is used when a query has some params missing (ie.
+// undefined). This typically suggests that the query is dependent on other
+// queries which are in-flight. In this scenario the query is not PENDING nor
+// has it failed.
+export const UNDEFINED_PARAMS = 'UNDEFINED_PARAMS';
